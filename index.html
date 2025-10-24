@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #036370 0%, #cedbf0 100%);
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            background: linear-gradient(90deg, #16947b, #064538);
         }
 
         .card:hover {
@@ -114,7 +114,7 @@
             display: block;
             width: 100%;
             padding: 12px 20px;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #036370 0%, #036370 100%);
             color: white;
             text-decoration: none;
             border-radius: 10px;
@@ -164,16 +164,56 @@
                 font-size: 1em;
             }
         }
+        .check-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .check-done {
+            width: 18px;
+            height: 18px;
+            accent-color: #036370; /* makes the checkbox match your theme */
+            cursor: pointer;
+        }
+
+        /* Optional: when a card is completed */
+        .card.completed {
+            opacity: 1;
+            background: #055c08;
+            position: relative;
+        }
+
+        .card.completed::after {
+            content: "Complete!";
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: #43e97b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 Class Dashboard</h1>
+        <h1>📚 Brady's 'Class Dashboard</h1>
         <p class="subtitle">Sophomore Year • Quick Links</p>
         
         <div class="grid">
             <div class="card history">
                 <h2><span class="icon">📜</span> History</h2>
+                <label class="check-label">
+                  <input type="checkbox" class="check-done">
+                  Mark Complete
+                </label>
+                
                 <div class="link-group">
                     <div class="link-label">Thursday Meeting at 12 PM</div>
                     <a href="https://meet.jit.si/homeschoolpartners2526" class="link-btn" target="_blank">Join Jitsi</a>
@@ -182,10 +222,19 @@
                     <div class="link-label">Course Materials</div>
                     <a href="https://k12.instructure.com/courses/2129834" class="link-btn" target="_blank">Open Canvas</a>
                 </div>
+                <div class="link-group">
+                    <div class="link-label">One Drive</div>
+                    <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fe39d8e539d1b4bc8%2FDocuments%2FHigh%20School%2FSophomore%20School%20Year%2FWorld%20History&viewid=4431361b%2D1e50%2D4f82%2Dad6a%2D51d7e600c397&view=0" class="link-btn" target="_blank">Open One Drive</a>
+                </div>
             </div>
 
             <div class="card chemistry">
                 <h2><span class="icon">⚗️</span> Chemistry</h2>
+                <label class="check-label">
+                  <input type="checkbox" class="check-done">
+                  Mark Complete
+                </label>
+                
                 <div class="link-group">
                     <div class="link-label">Tuesday Meeting at 11 AM</div>
                     <a href="https://drwile.gl.rna1.blindsidenetworks.com/rooms/jay-8pj-s6b-jir/join?reason=You%20have%20logged%20out%20of%20the%20conference" class="link-btn" target="_blank">Join Big Blue Button</a>
@@ -194,10 +243,19 @@
                     <div class="link-label">Course Materials</div>
                     <a href="https://bereanbuilders.instructure.com/courses/165" class="link-btn" target="_blank">Open Canvas</a>
                 </div>
+                <div class="link-group">
+                    <div class="link-label">One Drive</div>
+                    <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fe39d8e539d1b4bc8%2FDocuments%2FHigh%20School%2FSophomore%20School%20Year%2FChemistry&viewid=4431361b%2D1e50%2D4f82%2Dad6a%2D51d7e600c397&view=0" class="link-btn" target="_blank">Open One Drive</a>
+                </div>
             </div>
 
             <div class="card math">
                 <h2><span class="icon">➗</span> Math</h2>
+                <label class="check-label">
+                  <input type="checkbox" class="check-done">
+                  Mark Complete
+                </label>
+                
                 <div class="link-group">
                     <div class="link-label">Monday & Wednesday at 8 AM</div>
                     <a href="https://libertytutorials.webex.com/webappng/sites/libertytutorials/meeting/home" class="link-btn" target="_blank">Join Webex</a>
@@ -209,17 +267,72 @@
                 <div class="link-group">
                     <div class="link-label">Class Calendar</div>
                     <a href="https://www.libertytutorials.com/student-resources/calendar/algebra-2-calendar/" class="link-btn" target="_blank">View Calendar</a>
+                </div> <div class="link-group">
+                    <div class="link-label">One Drive</div>
+                    <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fe39d8e539d1b4bc8%2FDocuments%2FHigh%20School%2FSophomore%20School%20Year%2FAlgebra%202&viewid=4431361b%2D1e50%2D4f82%2Dad6a%2D51d7e600c397&view=0" class="link-btn" target="_blank">Open One Drive</a>
                 </div>
             </div>
 
             <div class="card literature">
                 <h2><span class="icon">📖</span> World Literature</h2>
+                <label class="check-label">
+                  <input type="checkbox" class="check-done">
+                  Mark Complete
+                </label>
+                
                 <div class="link-group">
                     <div class="link-label">Course Emails</div>
                     <a href="https://mail.google.com/mail/u/0/#label/10th+Grade+School%2FWorld+Literature" class="link-btn" target="_blank">Open Gmail</a>
+                </div>
+                <div class="link-group">
+                    <div class="link-label">One Drive</div>
+                    <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fe39d8e539d1b4bc8%2FDocuments%2FHigh%20School%2FSophomore%20School%20Year%2FWorld%20Lit&viewid=4431361b%2D1e50%2D4f82%2Dad6a%2D51d7e600c397&view=0" class="link-btn" target="_blank">Open One Drive</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+function getTodayKey() {
+  const now = new Date();
+  // Treat hours before 1 AM as part of the previous day
+  if (now.getHours() < 1) now.setDate(now.getDate() - 1);
+  const y = now.getFullYear();
+  const m = now.getMonth() + 1;
+  const d = now.getDate();
+  return `${y}-${m}-${d}`;
+}
+
+const todayKey = getTodayKey();
+
+// Loop through all checkboxes
+document.querySelectorAll('.check-done').forEach((box, i) => {
+  const card = box.closest('.card');
+  const key = `check_${i}_${todayKey}`;
+
+  // Load saved state
+  const saved = localStorage.getItem(key);
+  if (saved === 'true') {
+    box.checked = true;
+    card.classList.add('completed');
+  }
+
+  // When user checks/unchecks
+  box.addEventListener('change', () => {
+    localStorage.setItem(key, box.checked);
+    if (box.checked) {
+      card.classList.add('completed');
+    } else {
+      card.classList.remove('completed');
+    }
+  });
+});
+
+// Cleanup: remove old checkboxes from previous days
+Object.keys(localStorage).forEach(k => {
+  if (k.startsWith('check_') && !k.endsWith(todayKey)) {
+    localStorage.removeItem(k);
+  }
+});
+</script>
 </html>
